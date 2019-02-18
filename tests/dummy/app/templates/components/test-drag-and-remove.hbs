@@ -1,0 +1,12 @@
+<h2>Drag and Drop when changing bound list</h2>
+
+<EmberDragula as |d|>
+  <d.container class="list-for-removal">
+    {{#each this.list as |item|}}
+      <div class="item">
+        <span class="item-name">{{item.name}}</span>
+        <button {{action (action "removeItem" item)}}>Remove</button>
+      </div>
+    {{/each}}
+  </d.container>
+</EmberDragula>
